@@ -1,0 +1,25 @@
+import random
+count=0
+n=0
+num=random.randint(1,100)
+n=int(input("Guess the number"))
+while(n!=num):
+    if(count==4):
+        if(n>num):
+           print("Too high!")
+        else:
+           print("Too low!")
+        print("Already 5 attempts!")
+        print("The number is:",num)
+        break
+    elif(n<num): 
+        print("Too low!")
+        n=int(input("Guess the number again"))
+    elif(n>num):
+        print("Too high!")
+        n=int(input("Guess the number again"))
+    else:
+      n=int(input("Guess the number again"))
+    count=count+1
+if(n==num):
+ print("You won!")
